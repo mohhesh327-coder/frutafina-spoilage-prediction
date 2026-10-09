@@ -1,0 +1,918 @@
+2026-04-15 20:46:40,094 - __main__ - INFO - Initialized FrutaFinaServer on 127.0.0.1:5000
+2026-04-15 20:46:40,095 - __main__ - INFO - 
+======================================================================
+2026-04-15 20:46:40,095 - __main__ - INFO - FrutaFina Server Starting
+2026-04-15 20:46:40,096 - __main__ - INFO - ======================================================================
+2026-04-15 20:46:40,096 - __main__ - INFO - Server: http://127.0.0.1:5000
+2026-04-15 20:46:40,096 - __main__ - INFO - Documentation: http://127.0.0.1:5000/api/docs
+2026-04-15 20:46:40,096 - __main__ - INFO - Train endpoint: POST http://127.0.0.1:5000/api/train
+2026-04-15 20:46:40,096 - __main__ - INFO - ======================================================================
+
+2026-04-15 20:46:40,127 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-15 20:46:40,128 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-04-15 20:46:50,794 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2026 20:46:50] "GET / HTTP/1.1" 200 -
+2026-04-15 20:47:17,592 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2026 20:47:17] "GET / HTTP/1.1" 200 -
+2026-04-15 20:47:17,851 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2026 20:47:17] "GET / HTTP/1.1" 200 -
+2026-04-15 20:47:18,535 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2026 20:47:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-04-15 20:47:39,396 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2026 20:47:39] "GET / HTTP/1.1" 200 -
+2026-04-15 20:49:25,067 - __main__ - INFO - Initialized FrutaFinaServer on 127.0.0.1:5000
+2026-04-15 20:49:25,067 - __main__ - INFO - 
+======================================================================
+2026-04-15 20:49:25,068 - __main__ - INFO - FrutaFina Server Starting
+2026-04-15 20:49:25,068 - __main__ - INFO - ======================================================================
+2026-04-15 20:49:25,068 - __main__ - INFO - Server: http://127.0.0.1:5000
+2026-04-15 20:49:25,068 - __main__ - INFO - Documentation: http://127.0.0.1:5000/api/docs
+2026-04-15 20:49:25,068 - __main__ - INFO - Train endpoint: POST http://127.0.0.1:5000/api/train
+2026-04-15 20:49:25,068 - __main__ - INFO - ======================================================================
+
+2026-04-15 20:49:25,077 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-15 20:49:25,077 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-04-15 20:49:53,787 - __main__ - INFO - ======================================================================
+2026-04-15 20:49:53,788 - __main__ - INFO - FrutaFina Pipeline Initialized
+2026-04-15 20:49:53,788 - __main__ - INFO - ======================================================================
+2026-04-15 20:49:53,788 - __main__ - INFO - 
+======================================================================
+2026-04-15 20:49:53,788 - __main__ - INFO - STEP 1: SYNTHETIC DATA GENERATION
+2026-04-15 20:49:53,788 - __main__ - INFO - ======================================================================
+2026-04-15 20:49:53,788 - __main__ - INFO - Initialized StrawberryDataGenerator with 500 samples
+2026-04-15 20:49:53,788 - __main__ - INFO - Generating synthetic features...
+2026-04-15 20:49:53,806 - __main__ - INFO - Generated 500 samples with 5 features
+2026-04-15 20:49:53,806 - __main__ - INFO - Generating target variable (days_to_spoilage)...
+2026-04-15 20:49:53,809 - __main__ - INFO - Target variable range: 12.31 - 38.40 days
+2026-04-15 20:49:53,810 - __main__ - INFO - Dataset generation completed successfully
+2026-04-15 20:49:53,810 - __main__ - INFO - 
+Dataset Summary:
+2026-04-15 20:49:53,810 - __main__ - INFO - Features shape: (500, 5)
+2026-04-15 20:49:53,830 - __main__ - INFO - 
+Feature Statistics:
+       chitosan_conc  cardiolan_ratio  ...  storage_temp    humidity
+count     500.000000       500.000000  ...    500.000000  500.000000
+mean        1.247843         0.292781  ...     14.426006   64.992181
+std         0.448033         0.114197  ...      6.027207   14.290458
+min         0.507592         0.101853  ...      4.067584   40.078255
+25%         0.861920         0.191640  ...      9.062560   53.405610
+50%         1.269746         0.288729  ...     14.686718   64.800624
+75%         1.634187         0.390535  ...     19.484901   77.164669
+max         1.989447         0.499887  ...     24.965298   89.771876
+
+[8 rows x 5 columns]
+2026-04-15 20:49:53,830 - __main__ - INFO - 
+Target Statistics:
+Min: 12.31 days, Max: 38.40 days, Mean: 24.11 days
+2026-04-15 20:49:53,831 - __main__ - INFO - 
+======================================================================
+2026-04-15 20:49:53,831 - __main__ - INFO - STEP 2: DATA PREPROCESSING
+2026-04-15 20:49:53,831 - __main__ - INFO - ======================================================================
+2026-04-15 20:49:53,831 - __main__ - INFO - Initialized DataPreprocessor
+2026-04-15 20:49:53,832 - __main__ - INFO - Starting data preprocessing...
+2026-04-15 20:49:53,833 - __main__ - INFO - Features scaled using StandardScaler
+2026-04-15 20:49:53,834 - __main__ - INFO - Data split - Train: 400, Test: 100
+2026-04-15 20:49:53,834 - __main__ - INFO - 
+======================================================================
+2026-04-15 20:49:53,834 - __main__ - INFO - STEP 3: REGRESSION MODEL TRAINING (Random Forest)
+2026-04-15 20:49:53,834 - __main__ - INFO - ======================================================================
+2026-04-15 20:49:53,835 - __main__ - INFO - Initialized Random Forest Regressor (100 estimators)
+2026-04-15 20:49:53,835 - __main__ - INFO - Training Random Forest Regressor...
+2026-04-15 20:49:53,919 - __main__ - INFO - Regressor training completed
+2026-04-15 20:49:53,919 - __main__ - INFO - Evaluating Random Forest Regressor...
+2026-04-15 20:49:53,936 - __main__ - INFO - Regression Metrics - MSE: 7.7385, RMSE: 2.7818, R²: 0.5745
+2026-04-15 20:49:53,956 - __main__ - INFO - Feature importance calculated
+2026-04-15 20:49:53,957 - __main__ - INFO - 
+Regression Model Summary:
+2026-04-15 20:49:53,957 - __main__ - INFO - R² Score: 0.5745
+2026-04-15 20:49:53,958 - __main__ - INFO - RMSE: 2.7818 days
+2026-04-15 20:49:53,960 - __main__ - INFO - 
+Top 3 Important Features:
+                Feature  Importance
+2  date_seed_extract_mg    0.347914
+0         chitosan_conc    0.292493
+3          storage_temp    0.207202
+2026-04-15 20:49:53,960 - __main__ - INFO - 
+======================================================================
+2026-04-15 20:49:53,960 - __main__ - INFO - STEP 4: CLASSIFICATION MODEL TRAINING (XGBoost)
+2026-04-15 20:49:53,960 - __main__ - INFO - ======================================================================
+2026-04-15 20:49:53,960 - __main__ - INFO - Initialized XGBoost Classifier
+2026-04-15 20:49:53,960 - __main__ - INFO - Training XGBoost Classifier...
+2026-04-15 20:49:53,964 - __main__ - INFO - Class distribution - Fresh: 400, Warning: 0, Spoiled: 0
+2026-04-15 20:49:54,212 - __main__ - INFO - Classifier training completed
+2026-04-15 20:49:54,212 - __main__ - INFO - Evaluating XGBoost Classifier...
+2026-04-15 20:49:54,217 - __main__ - ERROR - Error in pipeline execution: Number of classes, 1, does not match size of target_names, 3. Try specifying the labels parameter
+Traceback (most recent call last):
+  File "E:\frutafina\frutafina.py", line 1080, in main
+    results = pipeline.run()
+              ^^^^^^^^^^^^^^
+  File "E:\frutafina\frutafina.py", line 627, in run
+    clf_metrics, clf_pred = classifier.evaluate(X_test, y_test)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\frutafina\frutafina.py", line 415, in evaluate
+    'classification_report': classification_report(
+                             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\sklearn\utils\_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\sklearn\metrics\_classification.py", line 3097, in classification_report
+    raise ValueError(
+ValueError: Number of classes, 1, does not match size of target_names, 3. Try specifying the labels parameter
+2026-04-15 20:50:05,545 - __main__ - INFO - API Request: /api/train
+2026-04-15 20:50:05,565 - __main__ - INFO - Initialized StrawberryDataGenerator with 500 samples
+2026-04-15 20:50:05,566 - __main__ - INFO - Generating synthetic features...
+2026-04-15 20:50:05,568 - __main__ - INFO - Generated 500 samples with 5 features
+2026-04-15 20:50:05,568 - __main__ - INFO - Generating target variable (days_to_spoilage)...
+2026-04-15 20:50:05,570 - __main__ - INFO - Target variable range: 12.31 - 38.40 days
+2026-04-15 20:50:05,570 - __main__ - INFO - Dataset generation completed successfully
+2026-04-15 20:50:05,571 - __main__ - INFO - Initialized DataPreprocessor
+2026-04-15 20:50:05,571 - __main__ - INFO - Starting data preprocessing...
+2026-04-15 20:50:05,575 - __main__ - INFO - Features scaled using StandardScaler
+2026-04-15 20:50:05,577 - __main__ - INFO - Data split - Train: 400, Test: 100
+2026-04-15 20:50:05,577 - __main__ - INFO - Initialized Random Forest Regressor (100 estimators)
+2026-04-15 20:50:05,577 - __main__ - INFO - Training Random Forest Regressor...
+2026-04-15 20:50:05,681 - __main__ - INFO - Regressor training completed
+2026-04-15 20:50:05,681 - __main__ - INFO - Evaluating Random Forest Regressor...
+2026-04-15 20:50:05,700 - __main__ - INFO - Regression Metrics - MSE: 7.7385, RMSE: 2.7818, R²: 0.5745
+2026-04-15 20:50:05,700 - __main__ - INFO - Initialized XGBoost Classifier
+2026-04-15 20:50:05,701 - __main__ - INFO - Training XGBoost Classifier...
+2026-04-15 20:50:05,702 - __main__ - INFO - Class distribution - Fresh: 400, Warning: 0, Spoiled: 0
+2026-04-15 20:50:05,795 - __main__ - INFO - Classifier training completed
+2026-04-15 20:50:05,795 - __main__ - INFO - Evaluating XGBoost Classifier...
+2026-04-15 20:50:05,798 - __main__ - ERROR - Training error: Number of classes, 1, does not match size of target_names, 3. Try specifying the labels parameter
+2026-04-15 20:50:05,799 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2026 20:50:05] "[35m[1mPOST /api/train HTTP/1.1[0m" 500 -
+2026-04-15 20:50:11,895 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2026 20:50:11] "[31m[1mPOST /api/batch/predict HTTP/1.1[0m" 400 -
+2026-04-15 20:50:44,997 - __main__ - INFO - API Request: /api/train
+2026-04-15 20:50:44,997 - __main__ - INFO - Initialized StrawberryDataGenerator with 500 samples
+2026-04-15 20:50:44,998 - __main__ - INFO - Generating synthetic features...
+2026-04-15 20:50:44,998 - __main__ - INFO - Generated 500 samples with 5 features
+2026-04-15 20:50:44,998 - __main__ - INFO - Generating target variable (days_to_spoilage)...
+2026-04-15 20:50:44,999 - __main__ - INFO - Target variable range: 12.31 - 38.40 days
+2026-04-15 20:50:44,999 - __main__ - INFO - Dataset generation completed successfully
+2026-04-15 20:50:44,999 - __main__ - INFO - Initialized DataPreprocessor
+2026-04-15 20:50:45,000 - __main__ - INFO - Starting data preprocessing...
+2026-04-15 20:50:45,001 - __main__ - INFO - Features scaled using StandardScaler
+2026-04-15 20:50:45,002 - __main__ - INFO - Data split - Train: 400, Test: 100
+2026-04-15 20:50:45,002 - __main__ - INFO - Initialized Random Forest Regressor (100 estimators)
+2026-04-15 20:50:45,002 - __main__ - INFO - Training Random Forest Regressor...
+2026-04-15 20:50:45,087 - __main__ - INFO - Regressor training completed
+2026-04-15 20:50:45,087 - __main__ - INFO - Evaluating Random Forest Regressor...
+2026-04-15 20:50:45,106 - __main__ - INFO - Regression Metrics - MSE: 7.7385, RMSE: 2.7818, R²: 0.5745
+2026-04-15 20:50:45,106 - __main__ - INFO - Initialized XGBoost Classifier
+2026-04-15 20:50:45,107 - __main__ - INFO - Training XGBoost Classifier...
+2026-04-15 20:50:45,107 - __main__ - INFO - Class distribution - Fresh: 400, Warning: 0, Spoiled: 0
+2026-04-15 20:50:45,134 - __main__ - INFO - Classifier training completed
+2026-04-15 20:50:45,134 - __main__ - INFO - Evaluating XGBoost Classifier...
+2026-04-15 20:50:45,138 - __main__ - ERROR - Training error: Number of classes, 1, does not match size of target_names, 3. Try specifying the labels parameter
+2026-04-15 20:50:45,138 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2026 20:50:45] "[35m[1mPOST /api/train HTTP/1.1[0m" 500 -
+2026-04-15 20:51:29,481 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2026 20:51:29] "GET / HTTP/1.1" 200 -
+2026-04-15 20:51:33,280 - __main__ - INFO - API Request: /api/train
+2026-04-15 20:51:33,280 - __main__ - INFO - Initialized StrawberryDataGenerator with 500 samples
+2026-04-15 20:51:33,280 - __main__ - INFO - Generating synthetic features...
+2026-04-15 20:51:33,282 - __main__ - INFO - Generated 500 samples with 5 features
+2026-04-15 20:51:33,282 - __main__ - INFO - Generating target variable (days_to_spoilage)...
+2026-04-15 20:51:33,283 - __main__ - INFO - Target variable range: 12.31 - 38.40 days
+2026-04-15 20:51:33,283 - __main__ - INFO - Dataset generation completed successfully
+2026-04-15 20:51:33,283 - __main__ - INFO - Initialized DataPreprocessor
+2026-04-15 20:51:33,283 - __main__ - INFO - Starting data preprocessing...
+2026-04-15 20:51:33,284 - __main__ - INFO - Features scaled using StandardScaler
+2026-04-15 20:51:33,285 - __main__ - INFO - Data split - Train: 400, Test: 100
+2026-04-15 20:51:33,285 - __main__ - INFO - Initialized Random Forest Regressor (100 estimators)
+2026-04-15 20:51:33,285 - __main__ - INFO - Training Random Forest Regressor...
+2026-04-15 20:51:33,365 - __main__ - INFO - Regressor training completed
+2026-04-15 20:51:33,367 - __main__ - INFO - Evaluating Random Forest Regressor...
+2026-04-15 20:51:33,385 - __main__ - INFO - Regression Metrics - MSE: 7.7385, RMSE: 2.7818, R²: 0.5745
+2026-04-15 20:51:33,385 - __main__ - INFO - Initialized XGBoost Classifier
+2026-04-15 20:51:33,385 - __main__ - INFO - Training XGBoost Classifier...
+2026-04-15 20:51:33,386 - __main__ - INFO - Class distribution - Fresh: 400, Warning: 0, Spoiled: 0
+2026-04-15 20:51:33,406 - __main__ - INFO - Classifier training completed
+2026-04-15 20:51:33,406 - __main__ - INFO - Evaluating XGBoost Classifier...
+2026-04-15 20:51:33,409 - __main__ - ERROR - Training error: Number of classes, 1, does not match size of target_names, 3. Try specifying the labels parameter
+2026-04-15 20:51:33,409 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2026 20:51:33] "[35m[1mPOST /api/train HTTP/1.1[0m" 500 -
+2026-04-15 20:51:38,221 - __main__ - INFO - API Request: /api/train
+2026-04-15 20:51:38,221 - __main__ - INFO - Initialized StrawberryDataGenerator with 500 samples
+2026-04-15 20:51:38,222 - __main__ - INFO - Generating synthetic features...
+2026-04-15 20:51:38,222 - __main__ - INFO - Generated 500 samples with 5 features
+2026-04-15 20:51:38,223 - __main__ - INFO - Generating target variable (days_to_spoilage)...
+2026-04-15 20:51:38,223 - __main__ - INFO - Target variable range: 12.31 - 38.40 days
+2026-04-15 20:51:38,224 - __main__ - INFO - Dataset generation completed successfully
+2026-04-15 20:51:38,224 - __main__ - INFO - Initialized DataPreprocessor
+2026-04-15 20:51:38,224 - __main__ - INFO - Starting data preprocessing...
+2026-04-15 20:51:38,225 - __main__ - INFO - Features scaled using StandardScaler
+2026-04-15 20:51:38,226 - __main__ - INFO - Data split - Train: 400, Test: 100
+2026-04-15 20:51:38,226 - __main__ - INFO - Initialized Random Forest Regressor (100 estimators)
+2026-04-15 20:51:38,226 - __main__ - INFO - Training Random Forest Regressor...
+2026-04-15 20:51:38,308 - __main__ - INFO - Regressor training completed
+2026-04-15 20:51:38,308 - __main__ - INFO - Evaluating Random Forest Regressor...
+2026-04-15 20:51:38,328 - __main__ - INFO - Regression Metrics - MSE: 7.7385, RMSE: 2.7818, R²: 0.5745
+2026-04-15 20:51:38,328 - __main__ - INFO - Initialized XGBoost Classifier
+2026-04-15 20:51:38,328 - __main__ - INFO - Training XGBoost Classifier...
+2026-04-15 20:51:38,329 - __main__ - INFO - Class distribution - Fresh: 400, Warning: 0, Spoiled: 0
+2026-04-15 20:51:38,349 - __main__ - INFO - Classifier training completed
+2026-04-15 20:51:38,350 - __main__ - INFO - Evaluating XGBoost Classifier...
+2026-04-15 20:51:38,352 - __main__ - ERROR - Training error: Number of classes, 1, does not match size of target_names, 3. Try specifying the labels parameter
+2026-04-15 20:51:38,353 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2026 20:51:38] "[35m[1mPOST /api/train HTTP/1.1[0m" 500 -
+2026-04-15 20:51:42,986 - __main__ - INFO - API Request: /api/train
+2026-04-15 20:51:42,987 - __main__ - INFO - Initialized StrawberryDataGenerator with 500 samples
+2026-04-15 20:51:42,987 - __main__ - INFO - Generating synthetic features...
+2026-04-15 20:51:42,987 - __main__ - INFO - Generated 500 samples with 5 features
+2026-04-15 20:51:42,987 - __main__ - INFO - Generating target variable (days_to_spoilage)...
+2026-04-15 20:51:42,988 - __main__ - INFO - Target variable range: 12.31 - 38.40 days
+2026-04-15 20:51:42,988 - __main__ - INFO - Dataset generation completed successfully
+2026-04-15 20:51:42,988 - __main__ - INFO - Initialized DataPreprocessor
+2026-04-15 20:51:42,988 - __main__ - INFO - Starting data preprocessing...
+2026-04-15 20:51:42,990 - __main__ - INFO - Features scaled using StandardScaler
+2026-04-15 20:51:42,990 - __main__ - INFO - Data split - Train: 400, Test: 100
+2026-04-15 20:51:42,990 - __main__ - INFO - Initialized Random Forest Regressor (100 estimators)
+2026-04-15 20:51:42,991 - __main__ - INFO - Training Random Forest Regressor...
+2026-04-15 20:51:43,077 - __main__ - INFO - Regressor training completed
+2026-04-15 20:51:43,077 - __main__ - INFO - Evaluating Random Forest Regressor...
+2026-04-15 20:51:43,095 - __main__ - INFO - Regression Metrics - MSE: 7.7385, RMSE: 2.7818, R²: 0.5745
+2026-04-15 20:51:43,095 - __main__ - INFO - Initialized XGBoost Classifier
+2026-04-15 20:51:43,096 - __main__ - INFO - Training XGBoost Classifier...
+2026-04-15 20:51:43,096 - __main__ - INFO - Class distribution - Fresh: 400, Warning: 0, Spoiled: 0
+2026-04-15 20:51:43,126 - __main__ - INFO - Classifier training completed
+2026-04-15 20:51:43,127 - __main__ - INFO - Evaluating XGBoost Classifier...
+2026-04-15 20:51:43,130 - __main__ - ERROR - Training error: Number of classes, 1, does not match size of target_names, 3. Try specifying the labels parameter
+2026-04-15 20:51:43,131 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2026 20:51:43] "[35m[1mPOST /api/train HTTP/1.1[0m" 500 -
+2026-04-15 20:51:54,867 - __main__ - INFO - API Request: /api/train
+2026-04-15 20:51:54,867 - __main__ - INFO - Initialized StrawberryDataGenerator with 500 samples
+2026-04-15 20:51:54,867 - __main__ - INFO - Generating synthetic features...
+2026-04-15 20:51:54,868 - __main__ - INFO - Generated 500 samples with 5 features
+2026-04-15 20:51:54,868 - __main__ - INFO - Generating target variable (days_to_spoilage)...
+2026-04-15 20:51:54,868 - __main__ - INFO - Target variable range: 12.31 - 38.40 days
+2026-04-15 20:51:54,868 - __main__ - INFO - Dataset generation completed successfully
+2026-04-15 20:51:54,868 - __main__ - INFO - Initialized DataPreprocessor
+2026-04-15 20:51:54,868 - __main__ - INFO - Starting data preprocessing...
+2026-04-15 20:51:54,870 - __main__ - INFO - Features scaled using StandardScaler
+2026-04-15 20:51:54,870 - __main__ - INFO - Data split - Train: 400, Test: 100
+2026-04-15 20:51:54,871 - __main__ - INFO - Initialized Random Forest Regressor (100 estimators)
+2026-04-15 20:51:54,871 - __main__ - INFO - Training Random Forest Regressor...
+2026-04-15 20:51:54,955 - __main__ - INFO - Regressor training completed
+2026-04-15 20:51:54,956 - __main__ - INFO - Evaluating Random Forest Regressor...
+2026-04-15 20:51:54,984 - __main__ - INFO - Regression Metrics - MSE: 7.7385, RMSE: 2.7818, R²: 0.5745
+2026-04-15 20:51:54,985 - __main__ - INFO - Initialized XGBoost Classifier
+2026-04-15 20:51:54,985 - __main__ - INFO - Training XGBoost Classifier...
+2026-04-15 20:51:54,986 - __main__ - INFO - Class distribution - Fresh: 400, Warning: 0, Spoiled: 0
+2026-04-15 20:51:55,015 - __main__ - INFO - Classifier training completed
+2026-04-15 20:51:55,015 - __main__ - INFO - Evaluating XGBoost Classifier...
+2026-04-15 20:51:55,018 - __main__ - ERROR - Training error: Number of classes, 1, does not match size of target_names, 3. Try specifying the labels parameter
+2026-04-15 20:51:55,019 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2026 20:51:55] "[35m[1mPOST /api/train HTTP/1.1[0m" 500 -
+2026-04-15 20:52:16,747 - __main__ - INFO - Initialized FrutaFinaServer on 127.0.0.1:5000
+2026-04-15 20:52:16,748 - __main__ - INFO - 
+======================================================================
+2026-04-15 20:52:16,748 - __main__ - INFO - FrutaFina Server Starting
+2026-04-15 20:52:16,748 - __main__ - INFO - ======================================================================
+2026-04-15 20:52:16,748 - __main__ - INFO - Server: http://127.0.0.1:5000
+2026-04-15 20:52:16,748 - __main__ - INFO - Documentation: http://127.0.0.1:5000/api/docs
+2026-04-15 20:52:16,748 - __main__ - INFO - Train endpoint: POST http://127.0.0.1:5000/api/train
+2026-04-15 20:52:16,748 - __main__ - INFO - ======================================================================
+
+2026-04-15 20:52:16,756 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-15 20:52:16,756 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-04-15 20:52:48,878 - __main__ - INFO - ======================================================================
+2026-04-15 20:52:48,878 - __main__ - INFO - FrutaFina Pipeline Initialized
+2026-04-15 20:52:48,878 - __main__ - INFO - ======================================================================
+2026-04-15 20:52:48,878 - __main__ - INFO - 
+======================================================================
+2026-04-15 20:52:48,878 - __main__ - INFO - STEP 1: SYNTHETIC DATA GENERATION
+2026-04-15 20:52:48,878 - __main__ - INFO - ======================================================================
+2026-04-15 20:52:48,878 - __main__ - INFO - Initialized StrawberryDataGenerator with 500 samples
+2026-04-15 20:52:48,878 - __main__ - INFO - Generating synthetic features...
+2026-04-15 20:52:48,878 - __main__ - INFO - Generated 500 samples with 5 features
+2026-04-15 20:52:48,879 - __main__ - INFO - Generating target variable (days_to_spoilage)...
+2026-04-15 20:52:48,879 - __main__ - INFO - Target variable range: 15.08 - 18.00 days
+2026-04-15 20:52:48,879 - __main__ - INFO - Shelf-life distribution - Fresh (>=10): 500, Warning (5-10): 0, Spoiled (<5): 0
+2026-04-15 20:52:48,881 - __main__ - INFO - Dataset generation completed successfully
+2026-04-15 20:52:48,881 - __main__ - INFO - 
+Dataset Summary:
+2026-04-15 20:52:48,881 - __main__ - INFO - Features shape: (500, 5)
+2026-04-15 20:52:48,887 - __main__ - INFO - 
+Feature Statistics:
+       chitosan_conc  cardiolan_ratio  ...  storage_temp    humidity
+count     500.000000       500.000000  ...    500.000000  500.000000
+mean        1.247843         0.292781  ...     14.426006   64.992181
+std         0.448033         0.114197  ...      6.027207   14.290458
+min         0.507592         0.101853  ...      4.067584   40.078255
+25%         0.861920         0.191640  ...      9.062560   53.405610
+50%         1.269746         0.288729  ...     14.686718   64.800624
+75%         1.634187         0.390535  ...     19.484901   77.164669
+max         1.989447         0.499887  ...     24.965298   89.771876
+
+[8 rows x 5 columns]
+2026-04-15 20:52:48,888 - __main__ - INFO - 
+Target Statistics:
+Min: 15.08 days, Max: 18.00 days, Mean: 17.98 days
+2026-04-15 20:52:48,888 - __main__ - INFO - 
+======================================================================
+2026-04-15 20:52:48,888 - __main__ - INFO - STEP 2: DATA PREPROCESSING
+2026-04-15 20:52:48,888 - __main__ - INFO - ======================================================================
+2026-04-15 20:52:48,888 - __main__ - INFO - Initialized DataPreprocessor
+2026-04-15 20:52:48,889 - __main__ - INFO - Starting data preprocessing...
+2026-04-15 20:52:48,890 - __main__ - INFO - Features scaled using StandardScaler
+2026-04-15 20:52:48,892 - __main__ - INFO - Data split - Train: 400, Test: 100
+2026-04-15 20:52:48,892 - __main__ - INFO - 
+======================================================================
+2026-04-15 20:52:48,892 - __main__ - INFO - STEP 3: REGRESSION MODEL TRAINING (Random Forest)
+2026-04-15 20:52:48,892 - __main__ - INFO - ======================================================================
+2026-04-15 20:52:48,892 - __main__ - INFO - Initialized Random Forest Regressor (100 estimators)
+2026-04-15 20:52:48,892 - __main__ - INFO - Training Random Forest Regressor...
+2026-04-15 20:52:48,976 - __main__ - INFO - Regressor training completed
+2026-04-15 20:52:48,977 - __main__ - INFO - Evaluating Random Forest Regressor...
+2026-04-15 20:52:48,996 - __main__ - INFO - Regression Metrics - MSE: 0.0064, RMSE: 0.0803, R²: -7.3013
+2026-04-15 20:52:49,014 - __main__ - INFO - Feature importance calculated
+2026-04-15 20:52:49,015 - __main__ - INFO - 
+Regression Model Summary:
+2026-04-15 20:52:49,015 - __main__ - INFO - R² Score: -7.3013
+2026-04-15 20:52:49,015 - __main__ - INFO - RMSE: 0.0803 days
+2026-04-15 20:52:49,017 - __main__ - INFO - 
+Top 3 Important Features:
+                Feature  Importance
+2  date_seed_extract_mg    0.282243
+3          storage_temp    0.261136
+1       cardiolan_ratio    0.239819
+2026-04-15 20:52:49,018 - __main__ - INFO - 
+======================================================================
+2026-04-15 20:52:49,018 - __main__ - INFO - STEP 4: CLASSIFICATION MODEL TRAINING (XGBoost)
+2026-04-15 20:52:49,018 - __main__ - INFO - ======================================================================
+2026-04-15 20:52:49,018 - __main__ - INFO - Initialized XGBoost Classifier
+2026-04-15 20:52:49,018 - __main__ - INFO - Training XGBoost Classifier...
+2026-04-15 20:52:49,019 - __main__ - INFO - Class distribution - Fresh: 400, Warning: 0, Spoiled: 0
+2026-04-15 20:52:49,107 - __main__ - INFO - Classifier training completed
+2026-04-15 20:52:49,107 - __main__ - INFO - Evaluating XGBoost Classifier...
+2026-04-15 20:52:49,129 - __main__ - INFO - Classification Accuracy: 1.0000
+2026-04-15 20:52:49,130 - __main__ - INFO - Confusion Matrix:
+[[100   0   0]
+ [  0   0   0]
+ [  0   0   0]]
+2026-04-15 20:52:49,132 - __main__ - INFO - Feature importance calculated
+2026-04-15 20:52:49,132 - __main__ - INFO - 
+Classification Model Summary:
+2026-04-15 20:52:49,132 - __main__ - INFO - Accuracy: 1.0000
+2026-04-15 20:52:49,132 - __main__ - INFO - 
+              precision    recall  f1-score   support
+
+       Fresh       1.00      1.00      1.00       100
+
+    accuracy                           1.00       100
+   macro avg       1.00      1.00      1.00       100
+weighted avg       1.00      1.00      1.00       100
+
+2026-04-15 20:52:49,135 - __main__ - INFO - 
+Top 3 Important Features:
+                Feature  Importance
+0         chitosan_conc         0.0
+1       cardiolan_ratio         0.0
+2  date_seed_extract_mg         0.0
+2026-04-15 20:52:49,135 - __main__ - INFO - 
+======================================================================
+2026-04-15 20:52:49,135 - __main__ - INFO - STEP 5: FEATURE IMPORTANCE ANALYSIS
+2026-04-15 20:52:49,135 - __main__ - INFO - ======================================================================
+2026-04-15 20:52:49,136 - __main__ - INFO - 
+Comparing impact of Chitosan vs Date Seed Extract:
+2026-04-15 20:52:49,138 - __main__ - INFO - Regression - Chitosan: 0.1665, Date Seed: 0.2822
+2026-04-15 20:52:49,138 - __main__ - INFO - Classification - Chitosan: 0.0000, Date Seed: 0.0000
+2026-04-15 20:52:49,139 - __main__ - INFO - 
+======================================================================
+2026-04-15 20:52:49,139 - __main__ - INFO - STEP 6: GENERATING VISUALIZATIONS
+2026-04-15 20:52:49,139 - __main__ - INFO - ======================================================================
+2026-04-15 20:52:49,139 - __main__ - INFO - Generating feature importance visualization...
+2026-04-15 20:52:49,879 - __main__ - INFO - Feature importance plot saved to 'feature_importance.png'
+2026-04-15 20:52:49,908 - __main__ - INFO - Generating confusion matrix visualization...
+2026-04-15 20:52:50,097 - __main__ - INFO - Confusion matrix plot saved to 'confusion_matrix.png'
+2026-04-15 20:52:50,105 - __main__ - INFO - Generating regression residuals visualization...
+2026-04-15 20:52:50,378 - __main__ - INFO - Regression residuals plot saved to 'regression_residuals.png'
+2026-04-15 20:52:50,385 - __main__ - INFO - 
+======================================================================
+2026-04-15 20:52:50,385 - __main__ - INFO - FRUTAFINA PIPELINE - EXECUTION SUMMARY
+2026-04-15 20:52:50,386 - __main__ - INFO - ======================================================================
+2026-04-15 20:52:50,393 - __main__ - INFO - 
+======================================================================
+2026-04-15 20:53:05,824 - __main__ - INFO - API Request: /api/train
+2026-04-15 20:53:05,824 - __main__ - INFO - Initialized StrawberryDataGenerator with 500 samples
+2026-04-15 20:53:05,824 - __main__ - INFO - Generating synthetic features...
+2026-04-15 20:53:05,825 - __main__ - INFO - Generated 500 samples with 5 features
+2026-04-15 20:53:05,825 - __main__ - INFO - Generating target variable (days_to_spoilage)...
+2026-04-15 20:53:05,826 - __main__ - INFO - Target variable range: 12.31 - 38.40 days
+2026-04-15 20:53:05,826 - __main__ - INFO - Dataset generation completed successfully
+2026-04-15 20:53:05,826 - __main__ - INFO - Initialized DataPreprocessor
+2026-04-15 20:53:05,826 - __main__ - INFO - Starting data preprocessing...
+2026-04-15 20:53:05,827 - __main__ - INFO - Features scaled using StandardScaler
+2026-04-15 20:53:05,828 - __main__ - INFO - Data split - Train: 400, Test: 100
+2026-04-15 20:53:05,828 - __main__ - INFO - Initialized Random Forest Regressor (100 estimators)
+2026-04-15 20:53:05,828 - __main__ - INFO - Training Random Forest Regressor...
+2026-04-15 20:53:05,916 - __main__ - INFO - Regressor training completed
+2026-04-15 20:53:05,917 - __main__ - INFO - Evaluating Random Forest Regressor...
+2026-04-15 20:53:05,934 - __main__ - INFO - Regression Metrics - MSE: 7.7385, RMSE: 2.7818, R²: 0.5745
+2026-04-15 20:53:05,935 - __main__ - INFO - Initialized XGBoost Classifier
+2026-04-15 20:53:05,935 - __main__ - INFO - Training XGBoost Classifier...
+2026-04-15 20:53:05,935 - __main__ - INFO - Class distribution - Fresh: 400, Warning: 0, Spoiled: 0
+2026-04-15 20:53:05,955 - __main__ - INFO - Classifier training completed
+2026-04-15 20:53:05,956 - __main__ - INFO - Evaluating XGBoost Classifier...
+2026-04-15 20:53:05,958 - __main__ - ERROR - Training error: Number of classes, 1, does not match size of target_names, 3. Try specifying the labels parameter
+2026-04-15 20:53:05,959 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2026 20:53:05] "[35m[1mPOST /api/train HTTP/1.1[0m" 500 -
+2026-04-15 20:54:45,607 - __main__ - INFO - Initialized FrutaFinaServer on 127.0.0.1:5000
+2026-04-15 20:54:45,607 - __main__ - INFO - 
+======================================================================
+2026-04-15 20:54:45,607 - __main__ - INFO - FrutaFina Server Starting
+2026-04-15 20:54:45,608 - __main__ - INFO - ======================================================================
+2026-04-15 20:54:45,608 - __main__ - INFO - Server: http://127.0.0.1:5000
+2026-04-15 20:54:45,608 - __main__ - INFO - Documentation: http://127.0.0.1:5000/api/docs
+2026-04-15 20:54:45,608 - __main__ - INFO - Train endpoint: POST http://127.0.0.1:5000/api/train
+2026-04-15 20:54:45,608 - __main__ - INFO - ======================================================================
+
+2026-04-15 20:54:45,616 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-15 20:54:45,617 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-04-15 20:55:09,422 - __main__ - INFO - API Request: /api/train
+2026-04-15 20:55:09,423 - __main__ - INFO - Initialized StrawberryDataGenerator with 500 samples
+2026-04-15 20:55:09,423 - __main__ - INFO - Generating synthetic features...
+2026-04-15 20:55:09,423 - __main__ - INFO - Generated 500 samples with 5 features
+2026-04-15 20:55:09,424 - __main__ - INFO - Generating target variable (days_to_spoilage)...
+2026-04-15 20:55:09,424 - __main__ - INFO - Target variable range: 12.31 - 38.40 days
+2026-04-15 20:55:09,425 - __main__ - INFO - Dataset generation completed successfully
+2026-04-15 20:55:09,425 - __main__ - INFO - Initialized DataPreprocessor
+2026-04-15 20:55:09,425 - __main__ - INFO - Starting data preprocessing...
+2026-04-15 20:55:09,427 - __main__ - INFO - Features scaled using StandardScaler
+2026-04-15 20:55:09,427 - __main__ - INFO - Data split - Train: 400, Test: 100
+2026-04-15 20:55:09,428 - __main__ - INFO - Initialized Random Forest Regressor (100 estimators)
+2026-04-15 20:55:09,428 - __main__ - INFO - Training Random Forest Regressor...
+2026-04-15 20:55:09,514 - __main__ - INFO - Regressor training completed
+2026-04-15 20:55:09,514 - __main__ - INFO - Evaluating Random Forest Regressor...
+2026-04-15 20:55:09,531 - __main__ - INFO - Regression Metrics - MSE: 7.7385, RMSE: 2.7818, R²: 0.5745
+2026-04-15 20:55:09,531 - __main__ - INFO - Initialized XGBoost Classifier
+2026-04-15 20:55:09,532 - __main__ - INFO - Training XGBoost Classifier...
+2026-04-15 20:55:09,532 - __main__ - INFO - Class distribution - Fresh: 400, Warning: 0, Spoiled: 0
+2026-04-15 20:55:09,550 - __main__ - INFO - Classifier training completed
+2026-04-15 20:55:09,551 - __main__ - INFO - Evaluating XGBoost Classifier...
+2026-04-15 20:55:09,554 - __main__ - ERROR - Training error: Number of classes, 1, does not match size of target_names, 3. Try specifying the labels parameter
+2026-04-15 20:55:09,554 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2026 20:55:09] "[35m[1mPOST /api/train HTTP/1.1[0m" 500 -
+2026-04-15 20:55:50,813 - __main__ - INFO - Initialized FrutaFinaServer on 127.0.0.1:5000
+2026-04-15 20:55:50,813 - __main__ - INFO - 
+======================================================================
+2026-04-15 20:55:50,814 - __main__ - INFO - FrutaFina Server Starting
+2026-04-15 20:55:50,814 - __main__ - INFO - ======================================================================
+2026-04-15 20:55:50,814 - __main__ - INFO - Server: http://127.0.0.1:5000
+2026-04-15 20:55:50,814 - __main__ - INFO - Documentation: http://127.0.0.1:5000/api/docs
+2026-04-15 20:55:50,814 - __main__ - INFO - Train endpoint: POST http://127.0.0.1:5000/api/train
+2026-04-15 20:55:50,814 - __main__ - INFO - ======================================================================
+
+2026-04-15 20:55:50,822 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-15 20:55:50,822 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-04-15 20:56:04,875 - __main__ - INFO - API Request: /api/train
+2026-04-15 20:56:04,876 - __main__ - INFO - Initialized StrawberryDataGenerator with 500 samples
+2026-04-15 20:56:04,876 - __main__ - INFO - Generating synthetic features...
+2026-04-15 20:56:04,876 - __main__ - INFO - Generated 500 samples with 5 features
+2026-04-15 20:56:04,877 - __main__ - INFO - Generating target variable (days_to_spoilage)...
+2026-04-15 20:56:04,877 - __main__ - INFO - Target variable range: 12.31 - 38.40 days
+2026-04-15 20:56:04,877 - __main__ - INFO - Dataset generation completed successfully
+2026-04-15 20:56:04,878 - __main__ - INFO - Initialized DataPreprocessor
+2026-04-15 20:56:04,878 - __main__ - INFO - Starting data preprocessing...
+2026-04-15 20:56:04,879 - __main__ - INFO - Features scaled using StandardScaler
+2026-04-15 20:56:04,880 - __main__ - INFO - Data split - Train: 400, Test: 100
+2026-04-15 20:56:04,880 - __main__ - INFO - Initialized Random Forest Regressor (100 estimators)
+2026-04-15 20:56:04,881 - __main__ - INFO - Training Random Forest Regressor...
+2026-04-15 20:56:04,962 - __main__ - INFO - Regressor training completed
+2026-04-15 20:56:04,963 - __main__ - INFO - Evaluating Random Forest Regressor...
+2026-04-15 20:56:04,981 - __main__ - INFO - Regression Metrics - MSE: 7.7385, RMSE: 2.7818, R²: 0.5745
+2026-04-15 20:56:04,981 - __main__ - INFO - Initialized XGBoost Classifier
+2026-04-15 20:56:04,981 - __main__ - INFO - Training XGBoost Classifier...
+2026-04-15 20:56:04,982 - __main__ - INFO - Class distribution - Fresh: 400, Warning: 0, Spoiled: 0
+2026-04-15 20:56:04,999 - __main__ - INFO - Classifier training completed
+2026-04-15 20:56:04,999 - __main__ - INFO - Evaluating XGBoost Classifier...
+2026-04-15 20:56:05,001 - __main__ - ERROR - Training error: Number of classes, 1, does not match size of target_names, 3. Try specifying the labels parameter
+2026-04-15 20:56:05,002 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2026 20:56:05] "[35m[1mPOST /api/train HTTP/1.1[0m" 500 -
+2026-04-15 20:56:12,258 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2026 20:56:12] "[31m[1mPOST /api/batch/predict HTTP/1.1[0m" 400 -
+2026-04-15 20:56:52,755 - __main__ - INFO - ======================================================================
+2026-04-15 20:56:52,755 - __main__ - INFO - FrutaFina Pipeline Initialized
+2026-04-15 20:56:52,755 - __main__ - INFO - ======================================================================
+2026-04-15 20:56:52,755 - __main__ - INFO - 
+======================================================================
+2026-04-15 20:56:52,755 - __main__ - INFO - STEP 1: SYNTHETIC DATA GENERATION
+2026-04-15 20:56:52,755 - __main__ - INFO - ======================================================================
+2026-04-15 20:56:52,755 - __main__ - INFO - Initialized StrawberryDataGenerator with 500 samples
+2026-04-15 20:56:52,755 - __main__ - INFO - Generating synthetic features...
+2026-04-15 20:56:52,756 - __main__ - INFO - Generated 500 samples with 5 features
+2026-04-15 20:56:52,756 - __main__ - INFO - Generating target variable (days_to_spoilage)...
+2026-04-15 20:56:52,756 - __main__ - INFO - Target variable range: 2.01 - 15.98 days
+2026-04-15 20:56:52,756 - __main__ - INFO - Shelf-life distribution - Fresh (>=10): 200, Warning (5-10): 175, Spoiled (<5): 125
+2026-04-15 20:56:52,756 - __main__ - INFO - Dataset generation completed successfully
+2026-04-15 20:56:52,756 - __main__ - INFO - 
+Dataset Summary:
+2026-04-15 20:56:52,756 - __main__ - INFO - Features shape: (500, 5)
+2026-04-15 20:56:52,764 - __main__ - INFO - 
+Feature Statistics:
+       chitosan_conc  cardiolan_ratio  ...  storage_temp    humidity
+count     500.000000       500.000000  ...    500.000000  500.000000
+mean        1.247843         0.292781  ...     14.426006   64.992181
+std         0.448033         0.114197  ...      6.027207   14.290458
+min         0.507592         0.101853  ...      4.067584   40.078255
+25%         0.861920         0.191640  ...      9.062560   53.405610
+50%         1.269746         0.288729  ...     14.686718   64.800624
+75%         1.634187         0.390535  ...     19.484901   77.164669
+max         1.989447         0.499887  ...     24.965298   89.771876
+
+[8 rows x 5 columns]
+2026-04-15 20:56:52,764 - __main__ - INFO - 
+Target Statistics:
+Min: 2.01 days, Max: 15.98 days, Mean: 8.67 days
+2026-04-15 20:56:52,764 - __main__ - INFO - 
+======================================================================
+2026-04-15 20:56:52,764 - __main__ - INFO - STEP 2: DATA PREPROCESSING
+2026-04-15 20:56:52,764 - __main__ - INFO - ======================================================================
+2026-04-15 20:56:52,764 - __main__ - INFO - Initialized DataPreprocessor
+2026-04-15 20:56:52,764 - __main__ - INFO - Starting data preprocessing...
+2026-04-15 20:56:52,765 - __main__ - INFO - Features scaled using StandardScaler
+2026-04-15 20:56:52,766 - __main__ - INFO - Data split - Train: 400, Test: 100
+2026-04-15 20:56:52,766 - __main__ - INFO - 
+======================================================================
+2026-04-15 20:56:52,766 - __main__ - INFO - STEP 3: REGRESSION MODEL TRAINING (Random Forest)
+2026-04-15 20:56:52,766 - __main__ - INFO - ======================================================================
+2026-04-15 20:56:52,766 - __main__ - INFO - Initialized Random Forest Regressor (100 estimators)
+2026-04-15 20:56:52,766 - __main__ - INFO - Training Random Forest Regressor...
+2026-04-15 20:56:52,837 - __main__ - INFO - Regressor training completed
+2026-04-15 20:56:52,837 - __main__ - INFO - Evaluating Random Forest Regressor...
+2026-04-15 20:56:52,853 - __main__ - INFO - Regression Metrics - MSE: 11.0590, RMSE: 3.3255, R²: 0.3550
+2026-04-15 20:56:52,871 - __main__ - INFO - Feature importance calculated
+2026-04-15 20:56:52,871 - __main__ - INFO - 
+Regression Model Summary:
+2026-04-15 20:56:52,871 - __main__ - INFO - R² Score: 0.3550
+2026-04-15 20:56:52,871 - __main__ - INFO - RMSE: 3.3255 days
+2026-04-15 20:56:52,872 - __main__ - INFO - 
+Top 3 Important Features:
+                Feature  Importance
+2  date_seed_extract_mg    0.277882
+3          storage_temp    0.259263
+0         chitosan_conc    0.213972
+2026-04-15 20:56:52,873 - __main__ - INFO - 
+======================================================================
+2026-04-15 20:56:52,873 - __main__ - INFO - STEP 4: CLASSIFICATION MODEL TRAINING (XGBoost)
+2026-04-15 20:56:52,873 - __main__ - INFO - ======================================================================
+2026-04-15 20:56:52,873 - __main__ - INFO - Initialized XGBoost Classifier
+2026-04-15 20:56:52,873 - __main__ - INFO - Training XGBoost Classifier...
+2026-04-15 20:56:52,873 - __main__ - INFO - Class distribution - Fresh: 162, Warning: 141, Spoiled: 97
+2026-04-15 20:56:53,098 - __main__ - INFO - Classifier training completed
+2026-04-15 20:56:53,098 - __main__ - INFO - Evaluating XGBoost Classifier...
+2026-04-15 20:56:53,106 - __main__ - INFO - Classification Accuracy: 0.5800
+2026-04-15 20:56:53,107 - __main__ - INFO - Confusion Matrix:
+[[30  5  3]
+ [ 9 18  7]
+ [ 4 14 10]]
+2026-04-15 20:56:53,108 - __main__ - INFO - Feature importance calculated
+2026-04-15 20:56:53,108 - __main__ - INFO - 
+Classification Model Summary:
+2026-04-15 20:56:53,108 - __main__ - INFO - Accuracy: 0.5800
+2026-04-15 20:56:53,108 - __main__ - INFO - 
+              precision    recall  f1-score   support
+
+       Fresh       0.70      0.79      0.74        38
+     Warning       0.49      0.53      0.51        34
+     Spoiled       0.50      0.36      0.42        28
+
+    accuracy                           0.58       100
+   macro avg       0.56      0.56      0.55       100
+weighted avg       0.57      0.58      0.57       100
+
+2026-04-15 20:56:53,111 - __main__ - INFO - 
+Top 3 Important Features:
+                Feature  Importance
+3          storage_temp    0.267259
+2  date_seed_extract_mg    0.237392
+0         chitosan_conc    0.202847
+2026-04-15 20:56:53,111 - __main__ - INFO - 
+======================================================================
+2026-04-15 20:56:53,111 - __main__ - INFO - STEP 5: FEATURE IMPORTANCE ANALYSIS
+2026-04-15 20:56:53,111 - __main__ - INFO - ======================================================================
+2026-04-15 20:56:53,111 - __main__ - INFO - 
+Comparing impact of Chitosan vs Date Seed Extract:
+2026-04-15 20:56:53,113 - __main__ - INFO - Regression - Chitosan: 0.2140, Date Seed: 0.2779
+2026-04-15 20:56:53,113 - __main__ - INFO - Classification - Chitosan: 0.2028, Date Seed: 0.2374
+2026-04-15 20:56:53,113 - __main__ - INFO - 
+======================================================================
+2026-04-15 20:56:53,113 - __main__ - INFO - STEP 6: GENERATING VISUALIZATIONS
+2026-04-15 20:56:53,113 - __main__ - INFO - ======================================================================
+2026-04-15 20:56:53,113 - __main__ - INFO - Generating feature importance visualization...
+2026-04-15 20:56:53,411 - __main__ - INFO - Feature importance plot saved to 'feature_importance.png'
+2026-04-15 20:56:53,435 - __main__ - INFO - Generating confusion matrix visualization...
+2026-04-15 20:56:53,613 - __main__ - INFO - Confusion matrix plot saved to 'confusion_matrix.png'
+2026-04-15 20:56:53,622 - __main__ - INFO - Generating regression residuals visualization...
+2026-04-15 20:56:53,910 - __main__ - INFO - Regression residuals plot saved to 'regression_residuals.png'
+2026-04-15 20:56:53,916 - __main__ - INFO - 
+======================================================================
+2026-04-15 20:56:53,916 - __main__ - INFO - FRUTAFINA PIPELINE - EXECUTION SUMMARY
+2026-04-15 20:56:53,916 - __main__ - INFO - ======================================================================
+2026-04-15 20:56:53,916 - __main__ - INFO - 
+[OK] Generated 500 synthetic strawberry samples
+2026-04-15 20:56:53,916 - __main__ - INFO - [OK] Random Forest Regressor - R² Score: 0.3550
+2026-04-15 20:56:53,916 - __main__ - INFO - [OK] XGBoost Classifier - Accuracy: 0.5800
+2026-04-15 20:56:53,916 - __main__ - INFO - [OK] Generated 3 visualization plots (PNG format)
+2026-04-15 20:56:53,916 - __main__ - INFO - [OK] Logs saved to 'frutafina.log'
+2026-04-15 20:56:53,916 - __main__ - INFO - 
+======================================================================
+2026-04-15 20:56:53,916 - __main__ - INFO - 
+[OK] FrutaFina pipeline completed successfully!
+2026-04-15 20:57:11,779 - __main__ - INFO - Initialized FrutaFinaServer on 127.0.0.1:5000
+2026-04-15 20:57:11,779 - __main__ - INFO - 
+======================================================================
+2026-04-15 20:57:11,779 - __main__ - INFO - FrutaFina Server Starting
+2026-04-15 20:57:11,780 - __main__ - INFO - ======================================================================
+2026-04-15 20:57:11,780 - __main__ - INFO - Server: http://127.0.0.1:5000
+2026-04-15 20:57:11,780 - __main__ - INFO - Documentation: http://127.0.0.1:5000/api/docs
+2026-04-15 20:57:11,780 - __main__ - INFO - Train endpoint: POST http://127.0.0.1:5000/api/train
+2026-04-15 20:57:11,780 - __main__ - INFO - ======================================================================
+
+2026-04-15 20:57:11,788 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-15 20:57:11,788 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-04-15 20:59:23,627 - __main__ - INFO - API Request: /api/train
+2026-04-15 20:59:23,627 - __main__ - INFO - Initialized StrawberryDataGenerator with 500 samples
+2026-04-15 20:59:23,628 - __main__ - INFO - Generating synthetic features...
+2026-04-15 20:59:23,628 - __main__ - INFO - Generated 500 samples with 5 features
+2026-04-15 20:59:23,628 - __main__ - INFO - Generating target variable (days_to_spoilage)...
+2026-04-15 20:59:23,629 - __main__ - INFO - Target variable range: 12.31 - 38.40 days
+2026-04-15 20:59:23,629 - __main__ - INFO - Dataset generation completed successfully
+2026-04-15 20:59:23,630 - __main__ - INFO - Initialized DataPreprocessor
+2026-04-15 20:59:23,630 - __main__ - INFO - Starting data preprocessing...
+2026-04-15 20:59:23,631 - __main__ - INFO - Features scaled using StandardScaler
+2026-04-15 20:59:23,632 - __main__ - INFO - Data split - Train: 400, Test: 100
+2026-04-15 20:59:23,632 - __main__ - INFO - Initialized Random Forest Regressor (100 estimators)
+2026-04-15 20:59:23,632 - __main__ - INFO - Training Random Forest Regressor...
+2026-04-15 20:59:23,719 - __main__ - INFO - Regressor training completed
+2026-04-15 20:59:23,720 - __main__ - INFO - Evaluating Random Forest Regressor...
+2026-04-15 20:59:23,736 - __main__ - INFO - Regression Metrics - MSE: 7.7385, RMSE: 2.7818, R²: 0.5745
+2026-04-15 20:59:23,736 - __main__ - INFO - Initialized XGBoost Classifier
+2026-04-15 20:59:23,737 - __main__ - INFO - Training XGBoost Classifier...
+2026-04-15 20:59:23,738 - __main__ - INFO - Class distribution - Fresh: 400, Warning: 0, Spoiled: 0
+2026-04-15 20:59:23,759 - __main__ - INFO - Classifier training completed
+2026-04-15 20:59:23,760 - __main__ - INFO - Evaluating XGBoost Classifier...
+2026-04-15 20:59:23,763 - __main__ - ERROR - Training error: Number of classes, 1, does not match size of target_names, 3. Try specifying the labels parameter
+2026-04-15 20:59:23,764 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2026 20:59:23] "[35m[1mPOST /api/train HTTP/1.1[0m" 500 -
+2026-04-15 20:59:45,534 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2026 20:59:45] "GET / HTTP/1.1" 200 -
+2026-04-15 20:59:45,649 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2026 20:59:45] "GET /api/features HTTP/1.1" 200 -
+2026-04-15 21:00:17,488 - __main__ - INFO - Initialized FrutaFinaServer on 127.0.0.1:5000
+2026-04-15 21:00:17,488 - __main__ - INFO - 
+======================================================================
+2026-04-15 21:00:17,489 - __main__ - INFO - FrutaFina Server Starting
+2026-04-15 21:00:17,489 - __main__ - INFO - ======================================================================
+2026-04-15 21:00:17,489 - __main__ - INFO - Server: http://127.0.0.1:5000
+2026-04-15 21:00:17,489 - __main__ - INFO - Documentation: http://127.0.0.1:5000/api/docs
+2026-04-15 21:00:17,489 - __main__ - INFO - Train endpoint: POST http://127.0.0.1:5000/api/train
+2026-04-15 21:00:17,489 - __main__ - INFO - ======================================================================
+
+2026-04-15 21:00:17,497 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-15 21:00:17,497 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-04-15 21:01:35,245 - __main__ - INFO - Initialized FrutaFinaServer on 127.0.0.1:5000
+2026-04-15 21:01:35,245 - __main__ - INFO - 
+======================================================================
+2026-04-15 21:01:35,246 - __main__ - INFO - FrutaFina Server Starting
+2026-04-15 21:01:35,246 - __main__ - INFO - ======================================================================
+2026-04-15 21:01:35,246 - __main__ - INFO - Server: http://127.0.0.1:5000
+2026-04-15 21:01:35,246 - __main__ - INFO - Documentation: http://127.0.0.1:5000/api/docs
+2026-04-15 21:01:35,246 - __main__ - INFO - Train endpoint: POST http://127.0.0.1:5000/api/train
+2026-04-15 21:01:35,246 - __main__ - INFO - ======================================================================
+
+2026-04-15 21:01:35,254 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-15 21:01:35,254 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-04-15 21:02:10,693 - __main__ - INFO - API Request: /api/train
+2026-04-15 21:02:10,693 - __main__ - INFO - Initialized StrawberryDataGenerator with 500 samples
+2026-04-15 21:02:10,694 - __main__ - INFO - Generating synthetic features...
+2026-04-15 21:02:10,694 - __main__ - INFO - Generated 500 samples with 5 features
+2026-04-15 21:02:10,695 - __main__ - INFO - Generating target variable (days_to_spoilage)...
+2026-04-15 21:02:10,695 - __main__ - INFO - Target variable range: 2.01 - 15.98 days
+2026-04-15 21:02:10,696 - __main__ - INFO - Shelf-life distribution - Fresh (>=10): 200, Warning (5-10): 175, Spoiled (<5): 125
+2026-04-15 21:02:10,696 - __main__ - INFO - Dataset generation completed successfully
+2026-04-15 21:02:10,696 - __main__ - INFO - Initialized DataPreprocessor
+2026-04-15 21:02:10,697 - __main__ - INFO - Starting data preprocessing...
+2026-04-15 21:02:10,699 - __main__ - INFO - Features scaled using StandardScaler
+2026-04-15 21:02:10,700 - __main__ - INFO - Data split - Train: 400, Test: 100
+2026-04-15 21:02:10,701 - __main__ - INFO - Initialized Random Forest Regressor (100 estimators)
+2026-04-15 21:02:10,701 - __main__ - INFO - Training Random Forest Regressor...
+2026-04-15 21:02:10,783 - __main__ - INFO - Regressor training completed
+2026-04-15 21:02:10,783 - __main__ - INFO - Evaluating Random Forest Regressor...
+2026-04-15 21:02:10,802 - __main__ - INFO - Regression Metrics - MSE: 11.0590, RMSE: 3.3255, R²: 0.3550
+2026-04-15 21:02:10,802 - __main__ - INFO - Initialized XGBoost Classifier
+2026-04-15 21:02:10,803 - __main__ - INFO - Training XGBoost Classifier...
+2026-04-15 21:02:10,804 - __main__ - INFO - Class distribution - Fresh: 162, Warning: 141, Spoiled: 97
+2026-04-15 21:02:11,051 - __main__ - INFO - Classifier training completed
+2026-04-15 21:02:11,051 - __main__ - INFO - Evaluating XGBoost Classifier...
+2026-04-15 21:02:11,062 - __main__ - INFO - Classification Accuracy: 0.5800
+2026-04-15 21:02:11,062 - __main__ - INFO - Confusion Matrix:
+[[30  5  3]
+ [ 9 18  7]
+ [ 4 14 10]]
+2026-04-15 21:02:11,062 - __main__ - INFO - Models trained successfully
+2026-04-15 21:02:11,063 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2026 21:02:11] "POST /api/train HTTP/1.1" 200 -
+2026-04-15 21:02:20,742 - __main__ - INFO - API Request: /api/batch/predict with 3 samples
+2026-04-15 21:02:20,779 - __main__ - INFO - Batch predictions completed: 3 samples
+2026-04-15 21:02:20,779 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2026 21:02:20] "POST /api/batch/predict HTTP/1.1" 200 -
+2026-04-15 21:02:50,436 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2026 21:02:50] "GET / HTTP/1.1" 200 -
+2026-04-15 21:02:55,960 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2026 21:02:55] "GET / HTTP/1.1" 200 -
+2026-04-15 21:07:55,426 - frutafina - INFO - Initialized StrawberryDataGenerator with 500 samples
+2026-04-15 21:07:55,426 - frutafina - INFO - Generating synthetic features...
+2026-04-15 21:07:55,429 - frutafina - INFO - Generated 500 samples with 5 features
+2026-04-15 21:07:55,429 - frutafina - INFO - Generating target variable (days_to_spoilage)...
+2026-04-15 21:07:55,431 - frutafina - INFO - Target variable range: 2.01 - 15.98 days
+2026-04-15 21:07:55,432 - frutafina - INFO - Shelf-life distribution - Fresh (>=10): 200, Warning (5-10): 175, Spoiled (<5): 125
+2026-04-15 21:07:55,433 - frutafina - INFO - Dataset generation completed successfully
+2026-04-15 21:07:55,433 - frutafina - INFO - Initialized DataPreprocessor
+2026-04-15 21:07:55,433 - frutafina - INFO - Starting data preprocessing...
+2026-04-15 21:07:55,439 - frutafina - INFO - Features scaled using StandardScaler
+2026-04-15 21:07:55,440 - frutafina - INFO - Data split - Train: 400, Test: 100
+2026-04-15 21:07:55,440 - frutafina - INFO - Initialized Random Forest Regressor (100 estimators)
+2026-04-15 21:07:55,441 - frutafina - INFO - Training Random Forest Regressor...
+2026-04-15 21:07:55,740 - frutafina - INFO - Regressor training completed
+2026-04-15 21:07:55,741 - frutafina - INFO - Evaluating Random Forest Regressor...
+2026-04-15 21:07:55,811 - frutafina - INFO - Regression Metrics - MSE: 11.0590, RMSE: 3.3255, R²: 0.3550
+2026-04-15 21:07:55,812 - frutafina - INFO - Initialized XGBoost Classifier
+2026-04-15 21:07:55,812 - frutafina - INFO - Training XGBoost Classifier...
+2026-04-15 21:07:55,815 - frutafina - INFO - Class distribution - Fresh: 162, Warning: 141, Spoiled: 97
+2026-04-15 21:07:56,478 - frutafina - INFO - Classifier training completed
+2026-04-15 21:07:56,478 - frutafina - INFO - Evaluating XGBoost Classifier...
+2026-04-15 21:07:56,488 - frutafina - INFO - Classification Accuracy: 0.5800
+2026-04-15 21:07:56,488 - frutafina - INFO - Confusion Matrix:
+[[30  5  3]
+ [ 9 18  7]
+ [ 4 14 10]]
+2026-04-15 21:08:30,712 - frutafina - INFO - Initialized StrawberryDataGenerator with 500 samples
+2026-04-15 21:08:30,713 - frutafina - INFO - Generating synthetic features...
+2026-04-15 21:08:30,714 - frutafina - INFO - Generated 500 samples with 5 features
+2026-04-15 21:08:30,715 - frutafina - INFO - Generating target variable (days_to_spoilage)...
+2026-04-15 21:08:30,716 - frutafina - INFO - Target variable range: 2.01 - 15.98 days
+2026-04-15 21:08:30,717 - frutafina - INFO - Shelf-life distribution - Fresh (>=10): 200, Warning (5-10): 175, Spoiled (<5): 125
+2026-04-15 21:08:30,718 - frutafina - INFO - Dataset generation completed successfully
+2026-04-15 21:08:30,718 - frutafina - INFO - Initialized DataPreprocessor
+2026-04-15 21:08:30,719 - frutafina - INFO - Starting data preprocessing...
+2026-04-15 21:08:30,723 - frutafina - INFO - Features scaled using StandardScaler
+2026-04-15 21:08:30,725 - frutafina - INFO - Data split - Train: 400, Test: 100
+2026-04-15 21:08:30,725 - frutafina - INFO - Initialized Random Forest Regressor (100 estimators)
+2026-04-15 21:08:30,726 - frutafina - INFO - Training Random Forest Regressor...
+2026-04-15 21:08:31,001 - frutafina - INFO - Regressor training completed
+2026-04-15 21:08:31,002 - frutafina - INFO - Evaluating Random Forest Regressor...
+2026-04-15 21:08:31,080 - frutafina - INFO - Regression Metrics - MSE: 11.0590, RMSE: 3.3255, R²: 0.3550
+2026-04-15 21:08:31,081 - frutafina - INFO - Initialized XGBoost Classifier
+2026-04-15 21:08:31,082 - frutafina - INFO - Training XGBoost Classifier...
+2026-04-15 21:08:31,084 - frutafina - INFO - Class distribution - Fresh: 162, Warning: 141, Spoiled: 97
+2026-04-15 21:08:31,675 - frutafina - INFO - Classifier training completed
+2026-04-15 21:08:31,676 - frutafina - INFO - Evaluating XGBoost Classifier...
+2026-04-15 21:08:31,685 - frutafina - INFO - Classification Accuracy: 0.5800
+2026-04-15 21:08:31,686 - frutafina - INFO - Confusion Matrix:
+[[30  5  3]
+ [ 9 18  7]
+ [ 4 14 10]]
+2026-04-15 21:29:39,772 - frutafina - INFO - Initialized StrawberryDataGenerator with 500 samples
+2026-04-15 21:29:39,774 - frutafina - INFO - Generating synthetic features...
+2026-04-15 21:29:39,778 - frutafina - INFO - Generated 500 samples with 5 features
+2026-04-15 21:29:39,779 - frutafina - INFO - Generating target variable (days_to_spoilage)...
+2026-04-15 21:29:39,781 - frutafina - INFO - Target variable range: 2.01 - 15.98 days
+2026-04-15 21:29:39,781 - frutafina - INFO - Shelf-life distribution - Fresh (>=10): 200, Warning (5-10): 175, Spoiled (<5): 125
+2026-04-15 21:29:39,782 - frutafina - INFO - Dataset generation completed successfully
+2026-04-15 21:29:39,782 - frutafina - INFO - Initialized DataPreprocessor
+2026-04-15 21:29:39,783 - frutafina - INFO - Starting data preprocessing...
+2026-04-15 21:29:39,790 - frutafina - INFO - Features scaled using StandardScaler
+2026-04-15 21:29:39,794 - frutafina - INFO - Data split - Train: 400, Test: 100
+2026-04-15 21:29:39,795 - frutafina - INFO - Initialized Random Forest Regressor (100 estimators)
+2026-04-15 21:29:39,795 - frutafina - INFO - Training Random Forest Regressor...
+2026-04-15 21:29:40,091 - frutafina - INFO - Regressor training completed
+2026-04-15 21:29:40,092 - frutafina - INFO - Evaluating Random Forest Regressor...
+2026-04-15 21:29:40,160 - frutafina - INFO - Regression Metrics - MSE: 11.0590, RMSE: 3.3255, R²: 0.3550
+2026-04-15 21:29:40,162 - frutafina - INFO - Initialized XGBoost Classifier
+2026-04-15 21:29:40,163 - frutafina - INFO - Training XGBoost Classifier...
+2026-04-15 21:29:40,166 - frutafina - INFO - Class distribution - Fresh: 162, Warning: 141, Spoiled: 97
+2026-04-15 21:29:40,737 - frutafina - INFO - Classifier training completed
+2026-04-15 21:29:40,737 - frutafina - INFO - Evaluating XGBoost Classifier...
+2026-04-15 21:29:40,749 - frutafina - INFO - Classification Accuracy: 0.5800
+2026-04-15 21:29:40,750 - frutafina - INFO - Confusion Matrix:
+[[30  5  3]
+ [ 9 18  7]
+ [ 4 14 10]]
+2026-04-15 21:44:47,595 - frutafina - INFO - Initialized StrawberryDataGenerator with 500 samples
+2026-04-15 21:44:47,596 - frutafina - INFO - Generating synthetic features...
+2026-04-15 21:44:47,599 - frutafina - INFO - Generated 500 samples with 5 features
+2026-04-15 21:44:47,599 - frutafina - INFO - Generating target variable (days_to_spoilage)...
+2026-04-15 21:44:47,601 - frutafina - INFO - Target variable range: 2.01 - 15.98 days
+2026-04-15 21:44:47,602 - frutafina - INFO - Shelf-life distribution - Fresh (>=10): 200, Warning (5-10): 175, Spoiled (<5): 125
+2026-04-15 21:44:47,603 - frutafina - INFO - Dataset generation completed successfully
+2026-04-15 21:44:47,603 - frutafina - INFO - Initialized DataPreprocessor
+2026-04-15 21:44:47,603 - frutafina - INFO - Starting data preprocessing...
+2026-04-15 21:44:47,607 - frutafina - INFO - Features scaled using StandardScaler
+2026-04-15 21:44:47,609 - frutafina - INFO - Data split - Train: 400, Test: 100
+2026-04-15 21:44:47,609 - frutafina - INFO - Initialized Random Forest Regressor (100 estimators)
+2026-04-15 21:44:47,609 - frutafina - INFO - Training Random Forest Regressor...
+2026-04-15 21:44:47,838 - frutafina - INFO - Regressor training completed
+2026-04-15 21:44:47,838 - frutafina - INFO - Evaluating Random Forest Regressor...
+2026-04-15 21:44:47,889 - frutafina - INFO - Regression Metrics - MSE: 11.0590, RMSE: 3.3255, R²: 0.3550
+2026-04-15 21:44:47,890 - frutafina - INFO - Initialized XGBoost Classifier
+2026-04-15 21:44:47,891 - frutafina - INFO - Training XGBoost Classifier...
+2026-04-15 21:44:47,893 - frutafina - INFO - Class distribution - Fresh: 162, Warning: 141, Spoiled: 97
+2026-04-15 21:44:48,430 - frutafina - INFO - Classifier training completed
+2026-04-15 21:44:48,431 - frutafina - INFO - Evaluating XGBoost Classifier...
+2026-04-15 21:44:48,441 - frutafina - INFO - Classification Accuracy: 0.5800
+2026-04-15 21:44:48,441 - frutafina - INFO - Confusion Matrix:
+[[30  5  3]
+ [ 9 18  7]
+ [ 4 14 10]]
+2026-04-16 10:37:37,531 - frutafina - INFO - Initialized StrawberryDataGenerator with 500 samples
+2026-04-16 10:37:37,556 - frutafina - INFO - Generating synthetic features...
+2026-04-16 10:37:37,633 - frutafina - INFO - Generated 500 samples with 5 features
+2026-04-16 10:37:37,636 - frutafina - INFO - Generating target variable (days_to_spoilage)...
+2026-04-16 10:37:37,639 - frutafina - INFO - Target variable range: 2.01 - 15.98 days
+2026-04-16 10:37:37,639 - frutafina - INFO - Shelf-life distribution - Fresh (>=10): 200, Warning (5-10): 175, Spoiled (<5): 125
+2026-04-16 10:37:37,639 - frutafina - INFO - Dataset generation completed successfully
+2026-04-16 10:37:37,654 - frutafina - INFO - Initialized DataPreprocessor
+2026-04-16 10:37:37,654 - frutafina - INFO - Starting data preprocessing...
+2026-04-16 10:37:37,671 - frutafina - INFO - Features scaled using StandardScaler
+2026-04-16 10:37:37,678 - frutafina - INFO - Data split - Train: 400, Test: 100
+2026-04-16 10:37:37,678 - frutafina - INFO - Initialized Random Forest Regressor (100 estimators)
+2026-04-16 10:37:37,678 - frutafina - INFO - Training Random Forest Regressor...
+2026-04-16 10:37:38,178 - frutafina - INFO - Regressor training completed
+2026-04-16 10:37:38,183 - frutafina - INFO - Evaluating Random Forest Regressor...
+2026-04-16 10:37:38,293 - frutafina - INFO - Regression Metrics - MSE: 11.0590, RMSE: 3.3255, R²: 0.3550
+2026-04-16 10:37:38,293 - frutafina - INFO - Initialized XGBoost Classifier
+2026-04-16 10:37:38,293 - frutafina - INFO - Training XGBoost Classifier...
+2026-04-16 10:37:38,324 - frutafina - INFO - Class distribution - Fresh: 162, Warning: 141, Spoiled: 97
+2026-04-16 10:37:42,049 - frutafina - INFO - Classifier training completed
+2026-04-16 10:37:42,049 - frutafina - INFO - Evaluating XGBoost Classifier...
+2026-04-16 10:37:42,090 - frutafina - INFO - Classification Accuracy: 0.5800
+2026-04-16 10:37:42,090 - frutafina - INFO - Confusion Matrix:
+[[30  5  3]
+ [ 9 18  7]
+ [ 4 14 10]]
+2026-04-16 11:44:39,628 - frutafina - INFO - Initialized StrawberryDataGenerator with 500 samples
+2026-04-16 11:44:39,634 - frutafina - INFO - Generating synthetic features...
+2026-04-16 11:44:39,636 - frutafina - INFO - Generated 500 samples with 5 features
+2026-04-16 11:44:39,637 - frutafina - INFO - Generating target variable (days_to_spoilage)...
+2026-04-16 11:44:39,638 - frutafina - INFO - Target variable range: 2.01 - 15.98 days
+2026-04-16 11:44:39,640 - frutafina - INFO - Shelf-life distribution - Fresh (>=10): 200, Warning (5-10): 175, Spoiled (<5): 125
+2026-04-16 11:44:39,640 - frutafina - INFO - Dataset generation completed successfully
+2026-04-16 11:44:39,640 - frutafina - INFO - Initialized DataPreprocessor
+2026-04-16 11:44:39,640 - frutafina - INFO - Starting data preprocessing...
+2026-04-16 11:44:39,644 - frutafina - INFO - Features scaled using StandardScaler
+2026-04-16 11:44:39,649 - frutafina - INFO - Data split - Train: 400, Test: 100
+2026-04-16 11:44:39,649 - frutafina - INFO - Initialized Random Forest Regressor (100 estimators)
+2026-04-16 11:44:39,649 - frutafina - INFO - Training Random Forest Regressor...
+2026-04-16 11:44:39,903 - frutafina - INFO - Regressor training completed
+2026-04-16 11:44:39,903 - frutafina - INFO - Evaluating Random Forest Regressor...
+2026-04-16 11:44:39,967 - frutafina - INFO - Regression Metrics - MSE: 11.0590, RMSE: 3.3255, R²: 0.3550
+2026-04-16 11:44:39,967 - frutafina - INFO - Initialized XGBoost Classifier
+2026-04-16 11:44:39,970 - frutafina - INFO - Training XGBoost Classifier...
+2026-04-16 11:44:39,971 - frutafina - INFO - Class distribution - Fresh: 162, Warning: 141, Spoiled: 97
+2026-04-16 11:44:40,559 - frutafina - INFO - Classifier training completed
+2026-04-16 11:44:40,559 - frutafina - INFO - Evaluating XGBoost Classifier...
+2026-04-16 11:44:40,579 - frutafina - INFO - Classification Accuracy: 0.5800
+2026-04-16 11:44:40,579 - frutafina - INFO - Confusion Matrix:
+[[30  5  3]
+ [ 9 18  7]
+ [ 4 14 10]]
+2026-04-16 11:48:43,549 - frutafina - INFO - Initialized StrawberryDataGenerator with 500 samples
+2026-04-16 11:48:43,549 - frutafina - INFO - Generating synthetic features...
+2026-04-16 11:48:43,552 - frutafina - INFO - Generated 500 samples with 5 features
+2026-04-16 11:48:43,552 - frutafina - INFO - Generating target variable (days_to_spoilage)...
+2026-04-16 11:48:43,554 - frutafina - INFO - Target variable range: 2.01 - 15.98 days
+2026-04-16 11:48:43,554 - frutafina - INFO - Shelf-life distribution - Fresh (>=10): 200, Warning (5-10): 175, Spoiled (<5): 125
+2026-04-16 11:48:43,554 - frutafina - INFO - Dataset generation completed successfully
+2026-04-16 11:48:43,554 - frutafina - INFO - Initialized DataPreprocessor
+2026-04-16 11:48:43,554 - frutafina - INFO - Starting data preprocessing...
+2026-04-16 11:48:43,560 - frutafina - INFO - Features scaled using StandardScaler
+2026-04-16 11:48:43,562 - frutafina - INFO - Data split - Train: 400, Test: 100
+2026-04-16 11:48:43,562 - frutafina - INFO - Initialized Random Forest Regressor (100 estimators)
+2026-04-16 11:48:43,562 - frutafina - INFO - Training Random Forest Regressor...
+2026-04-16 11:48:43,811 - frutafina - INFO - Regressor training completed
+2026-04-16 11:48:43,811 - frutafina - INFO - Evaluating Random Forest Regressor...
+2026-04-16 11:48:43,877 - frutafina - INFO - Regression Metrics - MSE: 11.0590, RMSE: 3.3255, R²: 0.3550
+2026-04-16 11:48:43,877 - frutafina - INFO - Initialized XGBoost Classifier
+2026-04-16 11:48:43,877 - frutafina - INFO - Training XGBoost Classifier...
+2026-04-16 11:48:43,877 - frutafina - INFO - Class distribution - Fresh: 162, Warning: 141, Spoiled: 97
+2026-04-16 11:48:44,463 - frutafina - INFO - Classifier training completed
+2026-04-16 11:48:44,465 - frutafina - INFO - Evaluating XGBoost Classifier...
+2026-04-16 11:48:44,493 - frutafina - INFO - Classification Accuracy: 0.5800
+2026-04-16 11:48:44,493 - frutafina - INFO - Confusion Matrix:
+[[30  5  3]
+ [ 9 18  7]
+ [ 4 14 10]]
+2026-04-20 11:20:20,121 - frutafina - INFO - Initialized StrawberryDataGenerator with 500 samples
+2026-04-20 11:20:20,122 - frutafina - INFO - Generating synthetic features...
+2026-04-20 11:20:20,126 - frutafina - INFO - Generated 500 samples with 5 features
+2026-04-20 11:20:20,126 - frutafina - INFO - Generating target variable (days_to_spoilage)...
+2026-04-20 11:20:20,141 - frutafina - INFO - Target variable range: 2.01 - 15.98 days
+2026-04-20 11:20:20,141 - frutafina - INFO - Shelf-life distribution - Fresh (>=10): 200, Warning (5-10): 175, Spoiled (<5): 125
+2026-04-20 11:20:20,143 - frutafina - INFO - Dataset generation completed successfully
+2026-04-20 11:20:20,143 - frutafina - INFO - Initialized DataPreprocessor
+2026-04-20 11:20:20,143 - frutafina - INFO - Starting data preprocessing...
+2026-04-20 11:20:20,156 - frutafina - INFO - Features scaled using StandardScaler
+2026-04-20 11:20:20,160 - frutafina - INFO - Data split - Train: 400, Test: 100
+2026-04-20 11:20:20,160 - frutafina - INFO - Initialized Random Forest Regressor (100 estimators)
+2026-04-20 11:20:20,160 - frutafina - INFO - Training Random Forest Regressor...
+2026-04-20 11:20:20,472 - frutafina - INFO - Regressor training completed
+2026-04-20 11:20:20,472 - frutafina - INFO - Evaluating Random Forest Regressor...
+2026-04-20 11:20:20,538 - frutafina - INFO - Regression Metrics - MSE: 11.0590, RMSE: 3.3255, R²: 0.3550
+2026-04-20 11:20:20,550 - frutafina - INFO - Initialized XGBoost Classifier
+2026-04-20 11:20:20,550 - frutafina - INFO - Training XGBoost Classifier...
+2026-04-20 11:20:20,565 - frutafina - INFO - Class distribution - Fresh: 162, Warning: 141, Spoiled: 97
+2026-04-20 11:20:23,114 - frutafina - INFO - Classifier training completed
+2026-04-20 11:20:23,114 - frutafina - INFO - Evaluating XGBoost Classifier...
+2026-04-20 11:20:23,178 - frutafina - INFO - Classification Accuracy: 0.5800
+2026-04-20 11:20:23,178 - frutafina - INFO - Confusion Matrix:
+[[30  5  3]
+ [ 9 18  7]
+ [ 4 14 10]]
